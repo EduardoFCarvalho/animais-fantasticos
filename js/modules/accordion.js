@@ -23,11 +23,7 @@ export default class Accordion {
       this.toggleAccordion(this.accordionList[0]);
       this.addAccordionEvent();
     }
-  }
-
-  if() {
-    accorionList[0].classList.add(this.activeClass);
-    accorionList[0].nextElementSibling.classList.add(this.activeClass);
+    return this;
   }
 }
 // console.log("teste");
