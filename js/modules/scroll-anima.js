@@ -1,9 +1,11 @@
+import debounce from "./debounce.js";
+
 export default class ScrollAnima {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6; //faz com que a animação comece no meio da tela ao invés de no topo.
 
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 200);
   }
 
   // O getDistance e checkDistance são uma otimização para que ao invés do caso anterior que as distâncias estavam sempre sendo atualizadas, agora o único valor que muda é o do scroll melhorando a performance.
