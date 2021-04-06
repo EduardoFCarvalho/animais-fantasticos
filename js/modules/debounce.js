@@ -10,3 +10,5 @@ export default function debounce(callback, delay) {
     }, delay);
   };
 }
+
+// O debounce deve ser usado principalmente em eventos de scroll e resize
